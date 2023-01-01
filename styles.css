@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #F8F8F8;
+    background-color: #f3f0f0;
     display: flex;
     align-items: center;
     font-family: 'Raleway', sans-serif;
@@ -19,15 +19,21 @@ body {
     flex-direction: column;
     align-items: flex-end;
     gap: 1.2em;
+    text-align: right;
 }
 
 h1 {
     font-size: 3rem;
 }
 
+h2 {
+    margin-top: 1.2em;
+    font-size: 2rem;
+}
+
 button {
     font-size: 2rem;
-    background: none;
+    background: white;
     border-radius: 30px;
     border: 1.2px solid black;
     padding: 0px 12px;
@@ -41,6 +47,42 @@ button:hover {
     transform: scale(1.05);
 }
 
+/* Grid/Pixel Range */
+.range-and-value {
+    display: flex;
+    gap: 1.2rem;
+}
+
+#pixel-range {
+    -webkit-appearance: none;
+    background-color: white;
+    border-radius: 30px;
+    border: 1.2px solid black;
+    padding: 0px 12px;
+}
+
+#pixel-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background-color: #d50bc4;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+}
+
+#pixel-range::-moz-slider-thumb {
+    cursor: ew-resize;
+    background-color: #d50bc4;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+}
+
+#value {
+    font-size: 1.3rem;
+}
+
+
 /* Adjustment to default colour picker appearance - may not work across all browsers/devices */
 #colour-picker {
     -webkit-appearance: none;
@@ -51,6 +93,7 @@ button:hover {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding-left: 2px;
 }
 
 #colour-picker::-webkit-color-swatch {
@@ -71,7 +114,6 @@ button:hover {
     height: 820px;
     width: 820px;
     display: grid;
-    /* gap: 0.1rem; */
     grid-template-columns: repeat(25, 1fr);
     grid-template-rows: repeat(25, 1fr);
     box-shadow: 1px 3px 15px rgba(0,0,0,0.2);
@@ -83,5 +125,7 @@ button:hover {
 }
 
 .colour-grid-square {
-    background-color: blue;
+    background-color: rgb(219, 18, 18);
 }
+
+/* Button functionality */
