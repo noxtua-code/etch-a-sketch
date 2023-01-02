@@ -14,12 +14,12 @@
 <body>
     <div class="sidebar">
         <h1>Etch-a-Sketch!</h1>
-        <button id="black">Black</button>
-        <button id="rainbow">Rainbow</button>
-        <button id="darker">Incrementally darker</button>
-        <div class="color-picker"><button id="custom">Custom</button><input type="color" id='colour-picker' value="#d50bc4" /></div>
-        <button id="eraser">Eraser</button>
-        <button id="clear">Clear</button>
+        <button class="active" id="black">Black</button>
+        <button class="inactive" id="rainbow">Rainbow</button>
+        <button class="inactive" id="darker">Incrementally darker</button>
+        <div class="color-picker"><button class="inactive" id="custom">Custom</button><input type="color" id='colour-picker' value="#d50bc4" /></div>
+        <button class="inactive" id="eraser">Eraser</button>
+        <button class="inactive" id="clear">Clear</button>
         <h2>Pixel size</h2>
         <div class="range-and-value"><input type="range" name="pixel-range" id="pixel-range"
             min="16" max="100"><output id="value">25 x 25</output></div>

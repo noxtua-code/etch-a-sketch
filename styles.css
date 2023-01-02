@@ -47,6 +47,12 @@ button:hover {
     transform: scale(1.05);
 }
 
+button.active {
+    box-shadow: 1px 3px 15px rgba(213, 11, 196, 0.4);
+    border-color: rgb(213, 11, 196);
+    transform: scale(1.05);
+}
+
 /* Grid/Pixel Range */
 .range-and-value {
     display: flex;
@@ -93,7 +99,7 @@ button:hover {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    padding-left: 2px;
+    padding-left: 5px;
 }
 
 #colour-picker::-webkit-color-swatch {
@@ -120,12 +126,9 @@ button:hover {
 }
 
 .blank-grid-square {
-    background-color: white;
-    border: 1px solid grey;
-}
-
-.colour-grid-square {
-    background-color: rgb(219, 18, 18);
+    background-color: #ffffff;
+    border: 1px solid rgba(128, 128, 128, 0.2);
 }
 
 /* Button functionality */
+
