@@ -1,3 +1,7 @@
+:root {
+    --grid-size: 90vh;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -76,7 +80,7 @@ button.active {
     border-radius: 10px;
 }
 
-#pixel-range::-moz-slider-thumb {
+#pixel-range::-moz-range-thumb {
     cursor: ew-resize;
     background-color: #d50bc4;
     width: 18px;
@@ -117,11 +121,9 @@ button.active {
 .grid-container {
     flex-shrink: 0;
     margin: 2rem 2rem;
-    height: 820px;
-    width: 820px;
+    height: var(--grid-size);
+    width: var(--grid-size);
     display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    grid-template-rows: repeat(25, 1fr);
     box-shadow: 1px 3px 15px rgba(0,0,0,0.2);
 }
 
@@ -130,5 +132,5 @@ button.active {
     border: 1px solid rgba(128, 128, 128, 0.2);
 }
 
-/* Button functionality */
+/* Media Queries */
 
