@@ -1,42 +1,42 @@
-:root {
-    --grid-size: 90vh;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    min-height: 100%;
     background-color: #f3f0f0;
     display: flex;
     align-items: center;
     font-family: 'Raleway', sans-serif;
     justify-content: center;
-    gap: 1rem;
 }
 
 /* Menu items */
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1.2em;
-    text-align: right;
+    display: grid;
+    gap: 0.5em;
+    text-align: center;
+    justify-items: right;
+
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 h2 {
-    margin-top: 1.2em;
-    font-size: 2rem;
+    margin-top: 0.2rem;
+    font-size: 1.5rem;
 }
 
 button {
-    font-size: 2rem;
+    font-size: 1.2rem;
     background: white;
     border-radius: 30px;
     border: 1.2px solid black;
@@ -55,6 +55,29 @@ button.active {
     box-shadow: 1px 3px 15px rgba(213, 11, 196, 0.4);
     border-color: rgb(213, 11, 196);
     transform: scale(1.05);
+}
+
+/* Adjustment to default colour picker appearance - may not work across all browsers/devices */
+#colour-picker {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+#colour-picker::-webkit-color-swatch {
+    border-radius: 30px;
+    border: none;
+}
+
+#colour-picker::-moz-color-swatch {
+    border-radius: 30px;
+    border: none;
 }
 
 /* Grid/Pixel Range */
@@ -89,40 +112,15 @@ button.active {
 }
 
 #value {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
-
-
-/* Adjustment to default colour picker appearance - may not work across all browsers/devices */
-#colour-picker {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 100px;
-    height: 2rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding-left: 5px;
-}
-
-#colour-picker::-webkit-color-swatch {
-    border-radius: 30px;
-    border: none;
-}
-
-#colour-picker::-moz-color-swatch {
-    border-radius: 30px;
-    border: none;
-}
-
 
 /* Main etch-a-sketch */
 .grid-container {
     flex-shrink: 0;
     margin: 2rem 2rem;
-    height: var(--grid-size);
-    width: var(--grid-size);
+    height: 80vh;
+    width: 80vh;
     display: grid;
     box-shadow: 1px 3px 15px rgba(0,0,0,0.2);
 }
@@ -134,3 +132,40 @@ button.active {
 
 /* Media Queries */
 
+@media (min-width: 1100px) {
+    body {
+        gap: 1rem;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2em;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: right;
+
+    }
+    
+    .grid-container {
+        height: 90vh;
+        width: 90vh;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        margin-top: 1.2em;
+        font-size: 2rem;
+    }
+    
+    button {
+        font-size: 2rem;
+    }
+
+    #value {
+        font-size: 1.3rem;
+    }
+}
